@@ -338,39 +338,37 @@ url-prefix("chrome://calendar/content") {
     background: 0 0!important
   }
 }
-@-moz-document url-prefix("about:") {
-  button:not([disabled]) {
-    background: #6d717d!important;
-    color: #e8e8ea!important;
-    text-shadow: none!important;
-    box-shadow: none!important;
-    border-radius: 3px!important;
-    border: none!important
-  }
-  button:focus:not([disabled]) {
-    background: #6d919d!important;
-    color: #e8e8ea!important;
-    text-shadow: none!important;
-    box-shadow: none!important;
-    border-radius: 3px!important;
-    border: none!important
-  }
-  button:hover:not([disabled]) {
-    background: #8d919d!important;
-    color: #f8f8fa!important;
-    text-shadow: none!important;
-    box-shadow: none!important;
-    border-radius: 3px!important;
-    border: none!important
-  }
-  button:active:not([disabled]) {
-    background: #5d61fe!important;
-    color: #e8e8ea!important;
-    text-shadow: none!important;
-    box-shadow: none!important;
-    border-radius: 3px!important;
-    border: none!important
-  }
+button:not([disabled]) {
+  background: #6d717d!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:focus:not([disabled]) {
+  background: #6d919d!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:hover:not([disabled]) {
+  background: #8d919d!important;
+  color: #f8f8fa!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:active:not([disabled]) {
+  background: #5d61fe!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
 }
 @-moz-document url-prefix(about:memory) {
   .legend,
