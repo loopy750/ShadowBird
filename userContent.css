@@ -325,7 +325,8 @@ url-prefix("chrome://calendar/content") {
   td {
     color: var(--in-content-text-color)!important;
     background-color: var(--thread-background)!important;
-    border: 1px solid!important
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   #action-box {
     background-color: var(--in-content-box-background)!important;
