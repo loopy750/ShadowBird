@@ -20,7 +20,7 @@ gulp.task('minify_base_code', function() {
 
 /* Add everything to userContent */
 gulp.task('userContent', function() {
-  return gulp.src(['css/common-files/*.css', 'css/userContent-files/*.css'])
+  return gulp.src(['css/common-files/*.css', 'css/userContent-files/!(patch_windows)*.css', 'css/userContent-files/*.css'])
     .pipe(concatCss('userContent.css'))
     .pipe(gulp.dest('.'));
 });

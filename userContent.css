@@ -240,6 +240,12 @@ menupopup,
     color: #fff!important
   }
 }
+@-moz-document url-prefix("https://start.thunderbird.net") {
+  body {
+    background: #1f2022!important;
+    color: #fff
+  }
+}
 /*! =============
  ShadowBird - patch_windows.css
  Contributed by loopy750
@@ -393,11 +399,5 @@ screen and (-moz-os-version:windows-win10) {
     button:not([disabled]) {
       color: var(--in-content-page-background)!important
     }
-  }
-}
-@-moz-document url-prefix("https://start.thunderbird.net") {
-  body {
-    background: #1f2022!important;
-    color: #fff
   }
 }
