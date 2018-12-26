@@ -1,0 +1,135 @@
+/*! =============
+ ShadowBird - patch_windows.css
+ Contributed by loopy750
+ https://github.com/loopy750
+================= */
+tabbox > tabs {
+  color: #cececf!important
+}
+#category-box {
+  background: var(--sidebar-background)!important;
+  color: #eef!important
+}
+.radio-check {
+  background: 0 0!important
+}
+#category-box .radio-check {
+  border: none!important
+}
+#c1ategory-box .radio-label {
+  color: #fff!important
+}
+#ca1tegory-box .radio-label {
+  color: #67f!important
+}
+radio[pane]:not([selected]) {
+  color: #eef!important
+}
+radio[pane][selected] {
+  color: #67f!important
+}
+menulist[open=true] {
+  background: #679!important
+}
+.dropmarker-icon {
+  filter: invert(80%)!important
+}
+.dialogBox {
+  background: var(--in-content-box-background)!important;
+  color: #eef!important
+}
+.dialogBox .dialogTitleBar {
+  background: var(--in-content-box-border-color)!important;
+  color: #eef!important
+}
+@-moz-document url-prefix("chrome://messenger/content"),
+url-prefix("chrome://passwordmgr"),
+url-prefix("chrome://global/content"),
+url-prefix("chrome://mozapps/content"),
+url-prefix("chrome://pippki/content"),
+url-prefix("chrome://calendar/content"),
+url-prefix("chrome://messenger/content") {
+  #ColorsDialog,
+  #ConnectionsDialog,
+  #CookiesDialog,
+  #NotificationsDialog,
+  #OfflineSettingsDialog,
+  #PermissionsDialog,
+  #ReturnReceiptsDialog,
+  #SendOptionsDialog,
+  #SignonViewerDialog,
+  #accountManager,
+  #attachmentReminderOptionsDialog,
+  #certmanager,
+  #config,
+  #editCategory,
+  #history,
+  .content-box,
+  .dialogFrame,
+  .windowDialog,
+  dialog {
+    background: var(--in-content-box-background)!important;
+    color: #eef!important
+  }
+  #historyItems {
+    filter: invert(90%)!important
+  }
+  treecol:hover {
+    background: var(--in-content-border-focus)!important
+  }
+}
+@-moz-document url("chrome://messenger/content/messengercompose/messengercompose.xul") {
+  *,
+  html {
+    background: #111!important;
+    color: #000!important
+  }
+}
+button:not([disabled]) {
+  background: #6d717d!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:focus:not([disabled]) {
+  background: #6d919d!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:hover:not([disabled]) {
+  background: #8d919d!important;
+  color: #f8f8fa!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+button:active:not([disabled]) {
+  background: #5d61fe!important;
+  color: #e8e8ea!important;
+  text-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 3px!important;
+  border: none!important
+}
+@-moz-document url-prefix(about:support) {
+  td {
+    color: var(--in-content-text-color)!important;
+    background-color: var(--thread-background)!important;
+    border: 1px solid!important
+  }
+  #action-box {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--primary-light-color)!important
+  }
+}
+@-moz-document url-prefix(about:blank) {
+  html {
+    background: 0 0!important
+  }
+}
