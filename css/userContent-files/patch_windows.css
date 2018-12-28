@@ -9,12 +9,14 @@ screen and (-moz-windows-default-theme),
 screen and (-moz-os-version:windows-win7),
 screen and (-moz-os-version:windows-win8),
 screen and (-moz-os-version:windows-win10) {
-  radio[pane]:not([selected]),
+  /*! Sidebar text colour */
+radio[pane]:not([selected]),
   radio[pane][selected],
   tabbox > tabs {
     color: var(--in-content-text-color)!important
   }
-  #category-box {
+  /*! Sidebar background */
+#category-box {
     background: var(--sidebar-background)!important;
     color: var(--in-content-text-color)!important
   }
@@ -30,15 +32,18 @@ screen and (-moz-os-version:windows-win10) {
   .dropmarker-icon {
     filter: invert(80%)!important
   }
-  .dialogBox {
+  /*! Dialog box dark theme */
+.dialogBox {
     background: var(--in-content-box-background)!important;
     color: var(--in-content-text-color)!important
   }
-  .dialogBox .dialogTitleBar {
+  /*! Dialog box title dark theme */
+.dialogBox .dialogTitleBar {
     background: var(--in-content-box-border-color)!important;
     color: var(--in-content-text-color)!important
   }
-  @-moz-document url-prefix("chrome://messenger/content"),
+  /*! Dialog box dark theme */
+@-moz-document url-prefix("chrome://messenger/content"),
   url-prefix("chrome://passwordmgr/content"),
   url-prefix("chrome://global/content"),
   url-prefix("chrome://mozapps/content"),

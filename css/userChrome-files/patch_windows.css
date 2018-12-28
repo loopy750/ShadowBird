@@ -65,19 +65,24 @@ screen and (-moz-os-version:windows-win10) {
   .toolbarbutton-1:not([type=menu-button]) {
     transition-duration: .25s!important
   }
-  .flagColumnHeader {
+  /*! Star */
+.flagColumnHeader {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAB3RJTUUH4goNEDYkhrsGgQAAAAlwSFlzAAAK8AAACvABQqw0mAAAANlJREFUeNq1UsENgzAMdKr+gW8+wASICRATZATIRIgJIBuwAYwAEwAffxkB6giiRi2tqFRLTmL7orucwtZ1hStxu4T+5cKdFs/zIIoiYIwdfXRdl3ZOy7IsMM8zjONoM/i+D9M0QZ7nOvu+B8dxvkrCLMtACKHPZ2/AI6uqMsOiKKyZbpKtdV3jY/+YO8YwcCnlqTNKKWPA8xt4WZYv4GEYDNjYGgSBduVdkEtJkpiaka44jnXRdR0SYJcA5BZFmqaaoW1bSxI2TQNhGB4SOJ33y2gxXIn/f74NiQFtCqcApPgAAAAASUVORK5CYII=)!important
   }
-  .junkStatusHeader {
+  /*! Junk */
+.junkStatusHeader {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAB3RJTUUH4goNEDkcKSGi0AAAAAlwSFlzAAAK8AAACvABQqw0mAAAANZJREFUeNq1UsENgzAMNFUHyJsXI2QFNmCDMAIjMAIrsEFGYASYAPLxFzaguaixEqmoolItWbk45/gcpzjPk+7Y4xb7l4RnBHVdU9u2AVtreZ5nwFIpRdu20b7vlxW473shf5PExhhUkGqIfZQUyakNwxDWpmmQVGYVkhsJUkDuuk6wGOYAn6aJ/RrcN8ieyFrrsF/XlSOvSAaXacUrVVVFSeO5pGVZMv3+diGnZ5LgJV0O6z2TvAdoPo5D+oiOGM4iL51DCc3jOJJzLjgwYlE/rPj7b30B5XeMpCnsESQAAAAASUVORK5CYII=)!important
   }
-  .readColumnHeader {
+  /*! Read */
+.readColumnHeader {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAB3RJTUUH4goNEDsJdsokuQAAAAlwSFlzAAAK8AAACvABQqw0mAAAAOFJREFUeNrlkjEORGAUhMfaQkdBIpsoNAqti9CIOyiQbXSikbiCVk2lcgGtUqn6QyMiFCrr/2+w7e4Ur/gyM3kvedx1XfhGj6/cvxJwHAdpmhKq4zhIkiRk2zaM44g8z8m+72SeZ+L7PtF1HZxt2yTLMrRtC0mS4HkezvPEsizgeR51XTPuui5M0wR/G953M6ZpwrqukGUZTdOg6zqIoohhGBhXFIV5Hn3fw7Isth9tMgwDRVGAck3TIAgC46qqMva8fa+qqkgYhrj3RRAENPuioyxLEkUR6E1xHDPO/eNrfACk9WjAePQZ1wAAAABJRU5ErkJggg==)!important
   }
-  .threadColumnHeader {
+  /*! Threads */
+.threadColumnHeader {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAB3RJTUUH4goNEQAtd7lFZwAAAAlwSFlzAAAK8AAACvABQqw0mAAAADVJREFUeNpj/P//PwMpgIkk1dTQ8IwuTnqGzyZ0DVJQTFsn4XUaCx4NWJ1GeycxDv60RBAAAPdZDLOv+UWsAAAAAElFTkSuQmCC)!important
   }
-  .tree-columnpicker-icon {
+  /*! Columns */
+.tree-columnpicker-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAB3RJTUUH4goNEQIhTDlrzgAAAAlwSFlzAAAK8AAACvABQqw0mAAAAHZJREFUeNpj/P//PwMpgIkk1YNTAwuUfkaEWilkDXABJAPQ+QzoGtBtwWoryTaQ5GlDQ0PsGhQVFaU+fvyI4mEYnwWHYThDjQlNEQxLOTg4MMBMBdEgPkgcpkEKDYPFEhISwIyCggJ4oBDytBTQPyghyEhq8gYAPOYiVHaCy0oAAAAASUVORK5CYII=)!important
   }
   #AccountCentralTitle,
@@ -160,14 +165,63 @@ treechildren::-moz-tree-image(flaggedCol,flagged) {
     background: 0 0!important;
     border-color: #0c0c0c!important
   }
-  @media screen and (-moz-windows-default-theme) {
+  /*! Dark scrollbar */
+@media screen and (-moz-windows-default-theme) {
     scrollbar {
       filter: invert(90%)!important
     }
   }
-  @media screen and (-moz-os-version:windows-win7) {
+  /*! Windows 7 fix */
+@media screen and (-moz-os-version:windows-win7) {
     treechildren {
       --treechildren-outline: none!important
     }
   }
+}
+/*! New mail popup dark theme */
+@-moz-document url-prefix("chrome://messenger/content/newmailalert.xul") {
+  /*! Attempt to fix bug that sometimes cuts off bottom half of window */
+/*! This is a bug caused by Thunderbird and not any code within this file */
+#newMailAlertNotification {
+    min-height: 77px!important
+  }
+  #alertImageBox {
+    background: #0f1012!important;
+    min-height: 74px!important
+  }
+  #alertTextBox,
+  #closeButton,
+  #newMailAlertNotification {
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-text-color)!important;
+    border-color: var(--in-content-box-background)!important
+  }
+  #alertGroove {
+    border-top-color: var(--in-content-box-background)!important;
+    border-bottom-color: #18191c!important
+  }
+}
+/*! Email attachment bar dark theme */
+#attachmentBar,
+#attachmentList,
+#attachmentToggle {
+  background: var(--in-content-page-background)!important;
+  color: var(--in-content-text-color)!important;
+  border-color: var(--in-content-box-border-color)!important
+}
+attachmentitem {
+  background: var(--sidebar-background)!important;
+  color: var(--in-content-text-color)!important;
+  border-color: var(--in-content-box-border-color)!important
+}
+attachmentitem:hover {
+  background: var(--in-content-box-background)!important;
+  color: var(--in-content-text-color)!important;
+  border-color: var(--in-content-box-border-color)!important
+}
+attachmentitem:active,
+attachmentitem:focus {
+  background: var(--in-content-table-header-background)!important;
+  color: var(--in-content-text-color)!important;
+  border-color: var(--in-content-box-border-color)!important
 }
