@@ -18,7 +18,7 @@
   --aboutProfiles-table-background: #4a4a4f!important;
   --in-content-text-color: #E2E2E2!important;
   --in-content-page-color: #FFF!important;
-  --in-content-page-background: #1f2023!important;
+  --in-content-page-background: #1F2023!important;
   --in-content-box-background: #403F3E!important;
   --in-content-box-background-hover: #3C4151!important;
   --in-content-border-focus: #426E96!important;
@@ -87,11 +87,6 @@ minimonth {
   --mmDaySelectedBorderColor: #EFCC5B!important;
   --mmDaySelectedTodayBackground: #EFCC5B!important;
   --mmDaySelectedTodayBorderColor: #FBDF87!important
-}
-@-moz-document url-prefix(about:blank) {
-  html {
-    background: #1f2022!important
-  }
 }
 @-moz-document url-prefix(about:) {
   /*! Context Menus/Drop Downs */
@@ -247,9 +242,9 @@ menupopup,
   }
 }
 /*! =============
- ShadowBird - patch_windows.css
- Contributed by loopy750
- https://github.com/loopy750
+ShadowBird - patch_windows.css
+Contributed by loopy750
+https://github.com/loopy750
 ================= */
 @media screen and (-moz-windows-theme),
 screen and (-moz-windows-classic),
@@ -264,15 +259,14 @@ radio[pane]:not([selected]),
     color: var(--in-content-text-color)!important
   }
   /*! Sidebar background */
-#category-box {
+#category-box,
+  #pref-category-box {
     background: var(--sidebar-background)!important;
     color: var(--in-content-text-color)!important
   }
-  .radio-check {
+  #pref-category-box .radio-check {
+    border: none!important;
     background: 0 0!important
-  }
-  #category-box .radio-check {
-    border: none!important
   }
   menulist[open=true] {
     background: var(--in-content-table-header-background)!important
@@ -298,16 +292,23 @@ radio[pane]:not([selected]),
   url-prefix("chrome://pippki/content"),
   url-prefix("chrome://calendar/content") {
     #ColorsDialog,
+    #ColorsDialogPane,
     #ConnectionsDialog,
+    #ConnectionsDialogPane,
     #CookiesDialog,
     #NotificationsDialog,
+    #NotificationsDialogPane,
     #OfflineSettingsDialog,
+    #OfflineSettingsDialogPane,
     #PermissionsDialog,
     #ReturnReceiptsDialog,
+    #ReturnReceiptsDialogPane,
     #SendOptionsDialog,
+    #SendOptionsDialogPane,
     #SignonViewerDialog,
     #accountManager,
     #attachmentReminderOptionsDialog,
+    #attachmentReminderOptionsDialogPane,
     #certmanager,
     #config,
     #editCategory,
@@ -319,8 +320,17 @@ radio[pane]:not([selected]),
       background: var(--in-content-box-background)!important;
       color: var(--in-content-text-color)!important
     }
-    #historyItems {
-      filter: invert(90%)!important
+    richlistbox#historyItems {
+      -moz-appearance: none!important;
+      background: var(--in-content-page-background)!important
+    }
+    dialog#history .update {
+      background: var(--chrome-secondary-background-color)!important;
+      color: var(--in-content-text-color)!important
+    }
+    dialog#history .update:hover {
+      background: var(--in-content-table-border-dark-color)!important;
+      color: var(--in-content-text-color)!important
     }
     treecol:hover {
       background: var(--in-content-border-focus)!important
@@ -344,11 +354,6 @@ radio[pane]:not([selected]),
     #action-box {
       background-color: var(--in-content-box-background)!important;
       color: var(--primary-light-color)!important
-    }
-  }
-  @-moz-document url-prefix(about:blank) {
-    html {
-      background: 0 0!important
     }
   }
   @-moz-document url-prefix("https://start.thunderbird.net") {
