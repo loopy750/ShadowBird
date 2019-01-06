@@ -237,7 +237,7 @@ menupopup,
 }
 @-moz-document url-prefix("https://start.thunderbird.net") {
   body {
-    background: #3A3B3F!important;
+    background: var(--thread-background)!important;
     color: var(--in-content-text-color)!important
   }
 }

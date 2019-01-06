@@ -1,6 +1,6 @@
 ![header](.github/header.png)
 
-ShadowBird is a spinoff of [ShadowFox](https://overdodactyl.github.io/ShadowFox/) ([GitHub Link](https://github.com/overdodactyl/ShadowFox)), a universal dark theme for Firefox 65+, designed for Thunderbird.  
+ShadowBird is a spinoff of [ShadowFox](https://overdodactyl.github.io/ShadowFox/) ([GitHub Link](https://github.com/overdodactyl/ShadowFox)), a universal dark theme for Firefox 57+, designed for Thunderbird.  
 
 This project is early in development and users are encouraged to open issues or pull requests with any problems, enhancements or feature requests.  
 
