@@ -89,7 +89,8 @@ minimonth {
   --mmDaySelectedTodayBorderColor: #FBDF87!important
 }
 .tree-rows {
-  background-color: var(--thread-background)!important
+  background-color: var(--thread-background)!important;
+  color: #f9f9fa!important
 }
 #ltnSidebar {
   background: var(--sidebar-background)!important;
