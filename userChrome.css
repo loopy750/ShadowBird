@@ -88,7 +88,7 @@ minimonth {
   --mmDaySelectedTodayBackground: #EFCC5B!important;
   --mmDaySelectedTodayBorderColor: #FBDF87!important
 }
-.tree-rows {
+.tree-rows:-moz-lwtheme-brighttext {
   background-color: var(--thread-background)!important;
   color: #f9f9fa!important
 }
@@ -148,7 +148,7 @@ tab[calview][selected=true] {
   color: var(--in-content-page-color)!important;
   border-color: #000!important
 }
-.searchBox {
+.searchBox:-moz-lwtheme-brighttext {
   background: var(--in-content-box-background)!important;
   color: var(--in-content-page-color)!important
 }
@@ -169,8 +169,7 @@ tab[calview][selected=true] {
 }
 .toolbarbutton-1.msgHeaderView-button {
   border: 1px solid var(--toolbarbutton-header-bordercolor);
-  background: var(--toolbarbutton-hover-background);
-  color: #fff!important
+  background: var(--toolbarbutton-hover-background)
 }
 .task-details-value {
   color: #fff!important
@@ -485,6 +484,7 @@ notification > button {
 .toolbarbutton-1:not([type=menu-button]):not([disabled=true]):not([checked=true]):not([open=true]):not(:active):hover {
   border: none!important;
   background: #646567!important;
+  color: var(--in-content-text-color)!important;
   box-shadow: none!important
 }
 .toolbarbutton-1 > .toolbarbutton-menubutton-button,
